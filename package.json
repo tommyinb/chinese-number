@@ -1,6 +1,6 @@
 {
   "name": "parse-chinese-number",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "quickly create a simple typescript project first",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -27,5 +27,13 @@
     "nodemon": "^2.0.9",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5"
-  }
+  },
+  "keywords": [
+    "chinese",
+    "numeral",
+    "parse",
+    "number",
+    "中文",
+    "數字"
+  ]
 }
