@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { parseSmall } from "../src/parseSmall";
+import { parseSmall } from "../../src/parse/parseSmall";
 
 describe("parseSmall", () => {
   it("parse simple text correctly", () => {

@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { parseDigit } from "../src/parseDigit";
+import { parseDigit } from "../../src/parse/parseDigit";
 
 describe("parseDigit", () => {
   it("parse single digit correctly", () => {

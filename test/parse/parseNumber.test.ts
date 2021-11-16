@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { parseNumber } from "../src/parseNumber";
+import { parseNumber } from "../../src/parse/parseNumber";
 
 describe("parseNumber", () => {
   it("parse decimal correctly", () => {

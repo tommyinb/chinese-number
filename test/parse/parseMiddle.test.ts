@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { parseMiddle } from "../src/parseMiddle";
+import { parseMiddle } from "../../src/parse/parseMiddle";
 
 describe("parseMiddle", () => {
   it("parse simple text correctly", () => {

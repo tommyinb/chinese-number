@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { mapDigit } from "../src/mapDigit";
+import { mapDigit } from "../../src/parse/mapDigit";
 
 describe("mapDigit", () => {
   it("map single digit correctly", () => {
