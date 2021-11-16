@@ -2,7 +2,7 @@
 
 Convert between Chinese numerals and number value.
 
-```
+```javascript
 parseChineseNumber("十二點三"): // 12.3
 parseChineseNumber("點三"): // 0.3
 parseChineseNumber("負六"): // -6
