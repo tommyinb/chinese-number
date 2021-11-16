@@ -1,0 +1,1 @@
+{"version":3,"file":"parseDigit.js","sourceRoot":"","sources":["../../src/parse/parseDigit.ts"],"names":[],"mappings":";;;AAAA,yCAAsC;AAEtC,SAAgB,UAAU,CAAC,IAAY;IACrC,MAAM,MAAM,GAAG,IAAA,mBAAQ,EAAC,IAAI,CAAC,CAAC;IAE9B,IAAI,MAAM,KAAK,SAAS,EAAE;QACxB,OAAO,SAAS,CAAC;KAClB;IAED,OAAO,QAAQ,CAAC,MAAM,CAAC,CAAC;AAC1B,CAAC;AARD,gCAQC"}
