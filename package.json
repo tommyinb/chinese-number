@@ -1,5 +1,5 @@
 {
-  "name": "chinese-number",
+  "name": "parse-chinese-number",
   "version": "0.0.1",
   "description": "quickly create a simple typescript project first",
   "main": "./dist/index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tommyinb/chinese-number.git"
+    "url": "git+https://github.com/tommyinb/parse-chinese-number.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tommyinb/chinese-number/issues"
+    "url": "https://github.com/tommyinb/parse-chinese-number/issues"
   },
-  "homepage": "https://github.com/tommyinb/chinese-number#readme",
+  "homepage": "https://github.com/tommyinb/parse-chinese-number#readme",
   "devDependencies": {
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",

@@ -1,4 +1,4 @@
-# chinese-number
+# Parse Chinese Number
 
 Convert between Chinese numerals and number value.
 
