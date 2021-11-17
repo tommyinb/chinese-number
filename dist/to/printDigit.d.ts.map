@@ -1,1 +1,1 @@
-{"version":3,"file":"printDigit.d.ts","sourceRoot":"","sources":["../../src/to/printDigit.ts"],"names":[],"mappings":"AAAA,wBAAgB,UAAU,CAAC,SAAS,EAAE,MAAM,kEAmC3C"}
+{"version":3,"file":"printDigit.d.ts","sourceRoot":"","sources":["../../src/to/printDigit.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAClC,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAC;AAEhC,wBAAgB,UAAU,CACxB,SAAS,EAAE,MAAM,EACjB,KAAK,GAAE,KAAmB,EAC1B,MAAM,GAAE,MAA2B,oIA4CpC"}
