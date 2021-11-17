@@ -3,7 +3,10 @@ import { parseNumber } from "../../src/parse/parseNumber";
 
 describe("parseNumber", () => {
   it("parse decimal correctly", () => {
+    expect(parseNumber("七點二一")).to.equal(7.21);
     expect(parseNumber("十二點三")).to.equal(12.3);
+
+    expect(parseNumber("三萬二千點一")).to.equal(32000.1);
     expect(parseNumber("三萬點四")).to.equal(30000.4);
 
     expect(parseNumber("點三")).to.equal(0.3);
