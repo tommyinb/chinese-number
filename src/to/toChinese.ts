@@ -1,8 +1,14 @@
 import { printBig } from "./printBig";
 import { printDigit } from "./printDigit";
+import { Script } from "./script";
+import { Style } from "./style";
 import { toArabic } from "./toArabic";
 
-export function toChinese(value: number) {
+export function toChinese(
+  value: number,
+  style: Style = Style.Small,
+  script: Script = Script.Traditional
+) {
   const text = toArabic(value);
 
   const match = /(-?)(\d+)(?:\.(\d+))?/.exec(text);
@@ -11,14 +17,22 @@ export function toChinese(value: number) {
   }
 
   const signText = match[1];
+  const signPart = signText
+    ? script === Script.Traditional
+      ? "負"
+      : "负"
+    : "";
 
   const integerText = match[2];
-  const integerPart = printBig(integerText);
+  const integerPart = printBig(integerText, style, script);
 
   const decimalText = match[3] || "";
-  const decimalPart = [...decimalText].map(printDigit).join("");
+  const decimalDigits = [...decimalText]
+    .map((t) => printDigit(t, style, script))
+    .join("");
+  const decimalPart = decimalDigits
+    ? (script === Script.Traditional ? "點" : "点") + decimalDigits
+    : "";
 
-  return `${signText ? "負" : ""}${integerPart}${
-    decimalPart ? `點${decimalPart}` : ""
-  }`;
+  return `${signPart}${integerPart}${decimalPart}`;
 }

@@ -3,6 +3,7 @@ export function mapDigit(text: string) {
     switch (character) {
       case "一":
       case "壹":
+      case "乙":
       case "1":
       case "１":
         return 1;
@@ -40,6 +41,7 @@ export function mapDigit(text: string) {
 
       case "六":
       case "陸":
+      case "陆":
       case "6":
       case "６":
         return 6;
@@ -63,6 +65,7 @@ export function mapDigit(text: string) {
         return 9;
 
       case "零":
+      case "〇":
       case "0":
       case "０":
         return 0;

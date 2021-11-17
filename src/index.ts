@@ -1,4 +1,6 @@
 import { parseNumber } from "./parse/parseNumber";
+import { Script } from "./to/script";
+import { Style } from "./to/style";
 import { toChinese } from "./to/toChinese";
 
 export function parseChineseNumber(text: string) {
@@ -9,7 +11,7 @@ export function parseChineseNumber(text: string) {
   return parseNumber(`${text}`);
 }
 
-export function toChineseNumber(value: number) {
+export function toChineseNumber(value: number, style?: Style, script?: Script) {
   if (value === undefined) {
     return undefined;
   }
@@ -24,5 +26,8 @@ export function toChineseNumber(value: number) {
     return undefined;
   }
 
-  return toChinese(number);
+  return toChinese(number, style || Style.Small, script || Script.Traditional);
 }
+
+export { Style };
+export { Script };
