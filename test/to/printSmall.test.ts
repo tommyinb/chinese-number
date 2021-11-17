@@ -1,8 +1,10 @@
 import { expect } from "chai";
 import { printSmall } from "../../src/to/printSmall";
+import { Script } from "../../src/to/script";
+import { Style } from "../../src/to/style";
 
 describe("printSmall", () => {
-  it("print correctly", () => {
+  it("print simple correctly", () => {
     expect(printSmall("1234")).to.equal("一千二百三十四");
     expect(printSmall("1230")).to.equal("一千二百三十");
     expect(printSmall("1200")).to.equal("一千二百");
@@ -24,5 +26,23 @@ describe("printSmall", () => {
 
     expect(printSmall("1020")).to.equal("一千零二十");
     expect(printSmall("1002")).to.equal("一千零二");
+  });
+
+  it("print variants correctly", () => {
+    expect(printSmall("1234", Style.Small, Script.Traditional)).to.equal(
+      "一千二百三十四"
+    );
+
+    expect(printSmall("1234", Style.Big, Script.Traditional)).to.equal(
+      "壹仟貳佰參拾肆"
+    );
+
+    expect(printSmall("1234", Style.Small, Script.Simplified)).to.equal(
+      "一千二百三十四"
+    );
+
+    expect(printSmall("1234", Style.Big, Script.Simplified)).to.equal(
+      "壹仟贰佰參拾肆"
+    );
   });
 });

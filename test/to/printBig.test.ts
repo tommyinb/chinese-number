@@ -1,8 +1,10 @@
 import { expect } from "chai";
 import { printBig } from "../../src/to/printBig";
+import { Script } from "../../src/to/script";
+import { Style } from "../../src/to/style";
 
 describe("printBig", () => {
-  it("print correctly", () => {
+  it("print simple correctly", () => {
     expect(printBig("1234")).to.equal("一千二百三十四");
 
     expect(printBig("21234")).to.equal("二萬一千二百三十四");
@@ -29,5 +31,23 @@ describe("printBig", () => {
     );
 
     expect(printBig("0")).to.equal("零");
+  });
+
+  it("print variants correctly", () => {
+    expect(printBig("150000000", Style.Small, Script.Traditional)).to.equal(
+      "一億五千萬"
+    );
+
+    expect(printBig("150000000", Style.Big, Script.Traditional)).to.equal(
+      "壹億伍仟萬"
+    );
+
+    expect(printBig("150000000", Style.Small, Script.Simplified)).to.equal(
+      "一亿五千万"
+    );
+
+    expect(printBig("150000000", Style.Big, Script.Simplified)).to.equal(
+      "壹亿伍仟万"
+    );
   });
 });
