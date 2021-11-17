@@ -1,6 +1,6 @@
 # Parse Chinese Number
 
-A simple but powerful module converting between Chinese numeral into number value and vice versa.
+A simple but powerful module converting Chinese numeral into number and vice versa.
 
 ```javascript
 import { parseChineseNumber } from "parse-chinese-number";
@@ -23,7 +23,19 @@ toChineseNumber(2300450607800); // "二兆三千零四億五千零六十萬七�
 
 ## Chinese Variants
 
-Variants are supported when parsing number. For example, "一" and "壹" are inter-changeable.
+Variants are supported as well. For example, "一" and "壹" are inter-changeable.
+
+```javascript
+parseChineseNumber("兩万參仟肆佰伍十陸"); // 23456
+parseChineseNumber("拾四亿"); // 14_0000_0000
+```
+
+```javascript
+toChineseNumber(150000000, Style.Big, Script.Traditional); // "壹億伍仟萬"
+toChineseNumber(150000000, Style.Big, Script.Simplified); // "壹亿伍仟万"
+toChineseNumber(150000000, Style.Small, Script.Traditional); // "一億五千萬"
+toChineseNumber(150000000, Style.Small, Script.Simplified); // "一亿五千万"
+```
 
 | Character | Variants                  |
 | --------- | ------------------------- |
