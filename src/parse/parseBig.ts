@@ -1,7 +1,9 @@
 import { parseMiddle } from "./parseMiddle";
 
 export function parseBig(text: string) {
-  const match = /(?:([^兆]*)兆)?(?:([^億亿]*)[億亿])?([零０0])?(.*)/.exec(text);
+  const match = /(?:([^兆]*)兆)?(?:([^億亿]*)[億亿])?([零０0])?(.*)/.exec(
+    text.replace(/萬萬/g, "億")
+  );
 
   if (!match) {
     return undefined;

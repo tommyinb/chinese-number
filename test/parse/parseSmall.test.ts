@@ -70,7 +70,12 @@ describe("parseSmall", () => {
   });
 
   it("parse variant text correctly", () => {
-    expect(parseSmall("貳仟參佰肆拾伍")).to.equal(2345);
+    expect(parseSmall("貳仟參佰廿伍")).to.equal(2325);
     expect(parseSmall("９仟零捌拾5")).to.equal(9085);
+  });
+
+  it("parse ancient text correctly", () => {
+    expect(parseSmall("一百廿三")).to.equal(123);
+    expect(parseSmall("五千四百卅二")).to.equal(5432);
   });
 });

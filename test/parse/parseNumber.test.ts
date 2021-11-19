@@ -56,4 +56,9 @@ describe("parseNumber", () => {
     expect(parseNumber("-３．7")).to.equal(-3.7);
     expect(parseNumber("-３.７")).to.equal(-3.7);
   });
+
+  it("parse ancient text correctly", () => {
+    expect(parseNumber("四萬萬")).to.equal(400000000);
+    expect(parseNumber("廿七萬")).to.equal(270000);
+  });
 });
