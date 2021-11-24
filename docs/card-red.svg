@@ -1,0 +1,10 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="white"/>
+<path d="M190.5 235.5C172.1 235.5 78.5 117.947 0 183.629V0H400V195.849C250 150.534 213.5 235.5 190.5 235.5Z" fill="url(#card-forward)"/>
+<defs>
+<linearGradient id="card-forward" x1="200" y1="0" x2="200" y2="250" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFA6A3"/>
+<stop offset="1" stop-color="#FF4C4F"/>
+</linearGradient>
+</defs>
+</svg>
