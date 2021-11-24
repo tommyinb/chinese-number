@@ -1,19 +1,17 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./docs/index.js",
+  entry: "./preview/index.js",
   devtool: "inline-source-map",
   resolve: {
     extensions: [".js"],
   },
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, "preview"),
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, "docs"),
-    },
+    static: { directory: __dirname },
     hot: true,
   },
 };
