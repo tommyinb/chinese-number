@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseSmall = void 0;
 const parseDigit_1 = require("./parseDigit");
 function parseSmall(text) {
-    const match = /(?:([^千仟]*)[千仟])?(?:([^百佰]*)[百佰])?(?:([^十拾]*)[十拾])?([零０0])?(.*)?/.exec(text);
+    const match = /(?:([^千仟]*)[千仟])?(?:([^百佰]*)[百佰])?(?:([^十拾]*)[十拾])?([零０0])?(.*)?/.exec(text.replace(/廿/g, "二十").replace(/卅/g, "三十"));
     if (!match) {
         return undefined;
     }

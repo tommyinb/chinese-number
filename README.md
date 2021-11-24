@@ -5,12 +5,11 @@ A simple but powerful module converting Chinese numeral into number and vice ver
 ```javascript
 import { parseChineseNumber } from "parse-chinese-number";
 
-parseChineseNumber("七點二一"): // 7.21
-parseChineseNumber("點三"): // 0.3
-parseChineseNumber("負六"): // -6
-parseChineseNumber("萬五"): // 15000
-parseChineseNumber("三億五千萬"): // 350000000
-
+parseChineseNumber("七點二一"); // 7.21
+parseChineseNumber("點三"); // 0.3
+parseChineseNumber("負六"); // -6
+parseChineseNumber("萬五"); // 15000
+parseChineseNumber("三億五千萬"); // 350000000
 ```
 
 ```javascript
