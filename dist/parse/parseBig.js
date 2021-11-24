@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseBig = void 0;
 const parseMiddle_1 = require("./parseMiddle");
 function parseBig(text) {
-    const match = /(?:([^兆]*)兆)?(?:([^億亿]*)[億亿])?([零０0])?(.*)/.exec(text);
+    const match = /(?:([^兆]*)兆)?(?:([^億亿]*)[億亿])?([零０0])?(.*)/.exec(text.replace(/萬萬/g, "億"));
     if (!match) {
         return undefined;
     }
