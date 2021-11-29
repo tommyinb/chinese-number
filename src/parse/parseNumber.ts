@@ -2,7 +2,7 @@ import { mapDigit } from "./mapDigit";
 import { parseBig } from "./parseBig";
 
 export function parseNumber(text: string) {
-  const match = /([負负-])?(.*?)(?:[點点.．]([^點点.．]*))?$/.exec(text);
+  const match = /(?:正|([負负-]))?(.*?)(?:[點点.．]([^點点.．]*))?$/.exec(text);
 
   if (!match) {
     return undefined;
