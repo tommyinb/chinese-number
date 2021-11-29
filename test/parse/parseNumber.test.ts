@@ -34,6 +34,11 @@ describe("parseNumber", () => {
     expect(parseNumber("萬點")).to.equal(1_0000);
     expect(parseNumber("億點")).to.equal(1_0000_0000);
     expect(parseNumber("兆點")).to.equal(1_0000_0000_0000);
+
+    expect(parseNumber("萬垓")).to.equal(Math.pow(10, 20 + 4));
+    expect(parseNumber("一二三四千萬垓")).to.equal(
+      1234 * Math.pow(10, 20 + 4 + 3)
+    );
   });
 
   it("return undefined for unrecognizable text", () => {

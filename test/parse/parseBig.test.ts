@@ -35,6 +35,8 @@ describe("parseBig", () => {
     expect(parseBig("一千二百三十四垓五千六百七十八京")).to.equal(
       12345678 * Math.pow(10, 16)
     );
+
+    expect(parseBig("九千垓")).to.equal(9 * Math.pow(10, 20 + 3));
   });
 
   it("parse overflow correctly", () => {

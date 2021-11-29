@@ -57,3 +57,19 @@ toChineseNumber(150000000, Style.Small, Script.Simplified); // "一亿五千万"
 | 千        | 仟                        |
 | 萬        | 万                        |
 | 億        | 亿                        |
+
+## Big Number
+
+The biggest unit is **垓** which represents 1_0000_0000_0000_0000_0000.
+
+Please be noted that this unit is a lot larger than _MAX_SAFE_INTEGER_, 9007_1992_5474_0991.
+
+| Unit | Value                       |
+| ---- | --------------------------- |
+| 萬   | 10,000                      |
+| 億   | 100,000,000                 |
+| 兆   | 1,000,000,000,000           |
+| 京   | 10,000,000,000,000,000      |
+| 垓   | 100,000,000,000,000,000,000 |
+
+In fact, value starting from **京** should be considered imprecise.
