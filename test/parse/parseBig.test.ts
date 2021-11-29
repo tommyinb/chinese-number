@@ -28,6 +28,15 @@ describe("parseBig", () => {
     expect(parseBig("兆二千")).to.equal(1_0000_0000_2000);
   });
 
+  it("parse big correctly", () => {
+    expect(parseBig("三京零三兆")).to.equal(
+      3 * Math.pow(10, 16) + 3 * Math.pow(10, 12)
+    );
+    expect(parseBig("一千二百三十四垓五千六百七十八京")).to.equal(
+      12345678 * Math.pow(10, 16)
+    );
+  });
+
   it("parse overflow correctly", () => {
     expect(parseBig("一萬億")).to.equal(1_0000_0000_0000);
     expect(parseBig("二萬三千億")).to.equal(2_3000_0000_0000);

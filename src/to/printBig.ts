@@ -1,40 +1,45 @@
+import { units as parseUnits } from "../parse/parseBig";
 import { printSmall } from "./printSmall";
 import { Script } from "./script";
 import { Style } from "./style";
+
+const printUnits = [
+  ...parseUnits,
+  { traditional: "萬", simplified: "万", power: 4 },
+];
 
 export function printBig(
   text: string,
   style: Style = Style.Small,
   script: Script = Script.Traditional
 ) {
-  if (text.length > 16) {
+  if (text.length > 24) {
     throw new Error(`cannot convert to Chinese as value ${text} is too big`);
   }
 
-  const unitText = text.slice(-4);
-  const unitPart = unitText ? printSmall(unitText, style, script) : "";
+  const tailText = text.slice(-4);
+  const tailPart = tailText ? printSmall(tailText, style, script) : "";
 
-  const tenThousandText = text.slice(-8, -4);
-  const tenThousandPart = tenThousandText
-    ? printSmall(tenThousandText, style, script) +
-      (script === Script.Traditional ? "萬" : "万")
-    : "";
+  const unitParts = printUnits.map(({ traditional, simplified, power }) => {
+    const part = text.slice(-power - 4, -power);
+    if (!part) {
+      return "";
+    }
 
-  const hundredMillionText = text.slice(-12, -8);
-  const hundredMillionPart = hundredMillionText
-    ? printSmall(hundredMillionText, style, script) +
-      (script === Script.Traditional ? "億" : "亿")
-    : "";
+    const value = printSmall(part, style, script);
+    const unit = script === Script.Traditional ? traditional : simplified;
 
-  const trillionText = text.slice(-16, -12);
-  const trillionPart = trillionText
-    ? printSmall(trillionText, style, script) + "兆"
-    : "";
+    return `${value}${unit}`;
+  });
 
-  const output = `${trillionPart}${hundredMillionPart}${tenThousandPart}${unitPart}`;
-  const replaced = output
-    .replace(/(零[萬万億亿兆]?)+/, "零")
-    .replace(/零+$/, "");
+  const output = `${unitParts.join("")}${tailPart}`;
 
-  return replaced || "零";
+  const unitPatterns = printUnits.map(
+    ({ traditional, simplified }) => `${traditional}${simplified}`
+  );
+  const zeroRegExp = new RegExp(`(零[${unitPatterns.join("")}]?)+`);
+
+  const zeroReplaced = output.replace(zeroRegExp, "零").replace(/零+$/, "");
+
+  return zeroReplaced || "零";
 }

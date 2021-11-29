@@ -33,6 +33,19 @@ describe("printBig", () => {
     expect(printBig("0")).to.equal("零");
   });
 
+  it("print big correctly", () => {
+    expect(
+      printBig("15000000000000000", Style.Small, Script.Traditional)
+    ).to.equal("一京五千兆");
+    expect(
+      printBig("150000000000000000000", Style.Small, Script.Traditional)
+    ).to.equal("一垓五千京");
+
+    expect(
+      printBig("123456780000000000000000", Style.Small, Script.Traditional)
+    ).to.equal("一千二百三十四垓五千六百七十八京");
+  });
+
   it("print variants correctly", () => {
     expect(printBig("150000000", Style.Small, Script.Traditional)).to.equal(
       "一億五千萬"
