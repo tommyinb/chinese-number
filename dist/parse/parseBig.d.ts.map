@@ -1,1 +1,1 @@
-{"version":3,"file":"parseBig.d.ts","sourceRoot":"","sources":["../../src/parse/parseBig.ts"],"names":[],"mappings":"AAEA,wBAAgB,QAAQ,CAAC,IAAI,EAAE,MAAM,sBAqEpC"}
+{"version":3,"file":"parseBig.d.ts","sourceRoot":"","sources":["../../src/parse/parseBig.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,KAAK;;;;GAKjB,CAAC;AAEF,wBAAgB,QAAQ,CAAC,IAAI,EAAE,MAAM,sBAgEpC"}

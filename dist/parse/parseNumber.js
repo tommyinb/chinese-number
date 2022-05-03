@@ -4,7 +4,7 @@ exports.parseNumber = void 0;
 const mapDigit_1 = require("./mapDigit");
 const parseBig_1 = require("./parseBig");
 function parseNumber(text) {
-    const match = /([負负-])?(.*?)(?:[點点.．]([^點点.．]*))?$/.exec(text);
+    const match = /(?:正|([負负-]))?(.*?)(?:[點点.．]([^點点.．]*))?$/.exec(text);
     if (!match) {
         return undefined;
     }

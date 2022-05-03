@@ -1,1 +1,1 @@
-{"version":3,"file":"printBig.d.ts","sourceRoot":"","sources":["../../src/to/printBig.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAClC,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAC;AAEhC,wBAAgB,QAAQ,CACtB,IAAI,EAAE,MAAM,EACZ,KAAK,GAAE,KAAmB,EAC1B,MAAM,GAAE,MAA2B,UAgCpC"}
+{"version":3,"file":"printBig.d.ts","sourceRoot":"","sources":["../../src/to/printBig.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAClC,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAC;AAOhC,wBAAgB,QAAQ,CACtB,IAAI,EAAE,MAAM,EACZ,KAAK,GAAE,KAAmB,EAC1B,MAAM,GAAE,MAA2B,UA+BpC"}
