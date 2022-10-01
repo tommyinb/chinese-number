@@ -128,16 +128,9 @@ input {
 
 .code {
   position: absolute;
-  left: 50%;
   top: calc(100% + 15px);
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
   color: #ffffff88;
-  opacity: 0;
-  transition: all 0.3s;
-  white-space: nowrap;
-}
-
-.card:hover > .code {
-  bottom: -30px;
-  opacity: 1;
 }

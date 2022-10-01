@@ -33,6 +33,11 @@ function runParse() {
 
   return value;
 }
+function trySetText(element, text) {
+  if (element.innerText !== text) {
+    element.innerText = text;
+  }
+}
 
 const printCard = document.querySelector(".card.print");
 const printInput = printCard.querySelector("input");
@@ -58,14 +63,10 @@ function runPrint() {
   trySetText(printCode, `toChineseNumber(${toArabic(value)}) = ${text}`);
 }
 
-let autoNext = true;
+const nextButton = document.querySelector(".next");
+
 let nextIndex = 0;
-setInterval(() => {
-  if (autoNext) {
-    next();
-  }
-}, 1500);
-function next() {
+nextButton.onclick = () => {
   const example = examples[nextIndex++ % examples.length];
 
   parseInput.value = example;
@@ -73,19 +74,4 @@ function next() {
 
   printInput.value = value;
   runPrint();
-}
-
-const nextButton = document.querySelector(".next");
-nextButton.onclick = () => {
-  autoNext = true;
-  next();
 };
-
-parseInput.onfocus = () => (autoNext = false);
-printInput.onfocus = () => (autoNext = false);
-
-function trySetText(element, text) {
-  if (element.innerText !== text) {
-    element.innerText = text;
-  }
-}
